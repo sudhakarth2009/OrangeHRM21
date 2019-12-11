@@ -29,10 +29,12 @@ public class TC006_Following {
 		
 		//*[@type='text']//following::input  --> 1 of 3	
 		
+		//*[@id='txtUsername']//following::input[1]
+		
 		
 		findElement(By.xpath("//*[@id='txtUsername']")).sendKeys("Admin");
 		findElement(By.xpath("//*[@id='txtUsername']//following::input[1]")).sendKeys("admin123");
-		findElement(By.xpath("//*[@id='txtUsername']//following::input[2]"));	
+		findElement(By.xpath("//*[@id='txtUsername']//following::input[2]")).click();	
 		
 	}
 	

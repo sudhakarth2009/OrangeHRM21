@@ -26,8 +26,6 @@ public class TC02_Login_Static_Paarameters2 {
 	
  
 	@Parameters({"Browser1","UserName1","Password1","Nationality1"})
-				
-
 	@Test
 	public void Login_Test(String Browser,String UserName,String Password,String Nationality) throws Exception
 	{

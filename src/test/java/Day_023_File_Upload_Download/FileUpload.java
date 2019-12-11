@@ -58,7 +58,7 @@ public class FileUpload
 			 	 Thread.sleep(100);
 			 	 findElement(By.linkText("0003")).click();
 			 	 
-			 	 Thread.sleep(300);
+			 	 Thread.sleep(3000);
 			 	 
 			 	
 			 	 
@@ -84,8 +84,9 @@ public class FileUpload
 		   findElement(By.name("ufile")).click();
 			
 			StringSelection sel = new StringSelection(PhotoPath);
-			   // Copy to clipboard
 			 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
+			 
+			 
 			 System.out.println("selection" +sel);
 			 
 			 // Create object of Robot class

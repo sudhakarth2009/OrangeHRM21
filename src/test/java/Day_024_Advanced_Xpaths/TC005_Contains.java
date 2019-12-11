@@ -13,7 +13,7 @@ public class TC005_Contains {
 	WebDriver driver;
 	
 	String Nationality_xpath ="//*[contains(@id,'menu_admin_nationality')]";
-	String Nationality_xpath1 ="//*[contains(text(),'Nationalities')]";
+	String Nationality_xpath1 ="//*[contains(text(),'Nationalit')]";
 	
 	@Test
 	public void Test1()throws Exception
@@ -32,14 +32,6 @@ public class TC005_Contains {
 		
 		findElement(By.xpath(Nationality_xpath1)).click();
 		
-		//findElement(By.linkText("Nationalities")).click();	 
-		
-		//>Nationalities</text>
-		
-		
-		//findElement(By.xpath(Nationality_xpath)).click();
-
-	     
 
 	}
 	

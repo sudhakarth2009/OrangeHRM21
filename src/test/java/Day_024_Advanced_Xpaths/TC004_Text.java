@@ -12,18 +12,18 @@ public class TC004_Text {
 	
 	WebDriver driver;
 	
-	String Nationality_xpath ="//a[text()='Nationalities']";
-	String Nationality_xpath1 ="//*[text()='Nationalities']";
+	//String Nationality_xpath ="//a[text()='Nationalities']";
+	//String Nationality_xpath1 ="//*[text()='Nationalities']";
 	
-	//<a href="/index.php/admin/nationality" id="menu_admin_nationality">Nationalities</a>
-	
-	
-	
-	//<input type="text" name="searchSystemUser[userName]" id="searchSystemUser_userName">
+	//<input type="submit" name="Submit" class="button" id="btnLogin" value="LOGIN">
 	
 	//<input name="txtUsername" id="txtUsername" type="text">
 	
-	//input[  @name="txtUsername" or  @id='txtUsername'   ]
+	//input[@name='txtUsername'  and  @id='txtUsername']
+	
+	//String Login_Xpath="//*[@type='submit' or @name='btnReset']";
+	String 	Login1_Xpath1="//input[@type='submit' and @name='Submit']";
+
 	
 	@Test
 	public void Test1()throws Exception
@@ -38,13 +38,11 @@ public class TC004_Text {
 		
 		findElement(By.name("txtUsername")).sendKeys("Admin");
 		findElement(By.name("txtPassword")).sendKeys("admin123");
-		findElement(By.id("btnLogin")).click();			
-		
-		findElement(By.linkText("Admin")).click();	
-		
-		//findElement(By.xpath(Nationality_xpath)).click();
-
-		findElement(By.xpath(Nationality_xpath1)).click();     
+		findElement(By.xpath(Login1_Xpath1)).click();	
+	
+		findElement(By.xpath("//b[text()='Admin']")).click();
+		findElement(By.xpath("//a[text()='Nationalities']")).click();
+		    
 
 	}
 	

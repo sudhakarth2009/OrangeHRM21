@@ -10,7 +10,7 @@ public class TestExample2_Browser
 	
 static WebDriver driver;
 	
-	@Parameters({"Browser1"})
+	@Parameters({"Browser2"})
 	@BeforeTest
 	public void Test1(String Browser) throws Exception 
 	{

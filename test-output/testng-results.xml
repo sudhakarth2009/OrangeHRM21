@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-07T16:51:49Z" name="Default suite" finished-at="2019-11-07T16:52:00Z" duration-ms="10888">
+  <suite started-at="2019-12-10T20:08:26 IST" name="Default suite" finished-at="2019-12-10T20:08:48 IST" duration-ms="22089">
     <groups>
     </groups>
-    <test started-at="2019-11-07T16:51:49Z" name="Default test" finished-at="2019-11-07T16:52:00Z" duration-ms="10888">
-      <class name="Day_022_Action_class.TC04_Drag_And_Drop">
-        <test-method signature="Login_Test()[pri:0, instance:Day_022_Action_class.TC04_Drag_And_Drop@54c562f7]" started-at="2019-11-07T16:51:49Z" name="Login_Test" finished-at="2019-11-07T16:52:00Z" duration-ms="10834" status="PASS">
+    <test started-at="2019-12-10T20:08:26 IST" name="Default test" finished-at="2019-12-10T20:08:48 IST" duration-ms="22089">
+      <class name="Day_003_Locators.TC01_Xpath">
+        <test-method signature="Test210()[pri:0, instance:Day_003_Locators.TC01_Xpath@7c0c77c7]" started-at="2019-12-10T20:08:26 IST" name="Test210" finished-at="2019-12-10T20:08:48 IST" duration-ms="21933" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login_Test -->
-      </class> <!-- Day_022_Action_class.TC04_Drag_And_Drop -->
+        </test-method> <!-- Test210 -->
+      </class> <!-- Day_003_Locators.TC01_Xpath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

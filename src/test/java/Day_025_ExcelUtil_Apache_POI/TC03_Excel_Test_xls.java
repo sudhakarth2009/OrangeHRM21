@@ -2,14 +2,16 @@ package Day_025_ExcelUtil_Apache_POI;
 
 import ExcelUtil.*;
 
+//Step1 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellStyle;
+
+
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -18,6 +20,8 @@ import org.testng.annotations.Test;
 
 public  class TC03_Excel_Test_xls
 {
+	
+	//step2
 	public FileInputStream fis = null;
     public HSSFWorkbook workbook = null;
     public HSSFSheet sheet = null;
@@ -30,12 +34,12 @@ public  class TC03_Excel_Test_xls
     {
     	
     	TC03_Excel_Test_xls eat=new TC03_Excel_Test_xls();
-    	eat.PutCellData( "C://HTML Report//OrangeHRM6//TC01_EMPExport2.xls","Sheet1",1,0,"Admin");
-    	eat.PutCellData( "C://HTML Report//OrangeHRM6//TC01_EMPExport2.xls","Sheet1",1,1,"admin123");
+    	eat.PutCellData1( "C://HTML Report//OrangeHRM6//TC01_EMPExport2.xls","Sheet1",1,0,"Admin");
+    	eat.PutCellData1( "C://HTML Report//OrangeHRM6//TC01_EMPExport2.xls","Sheet1",1,1,"admin123");
     }
     
     
-    public  void PutCellData(String xlFilePath,String sheetName,int rowNum,int column,String Text)
+    public  void PutCellData1(String xlFilePath,String sheetName,int rowNum,int column,String Text)
     		throws Exception
     {
     	

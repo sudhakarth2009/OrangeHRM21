@@ -25,7 +25,8 @@ public class TC02_Fluent_Wait {
 	public void Login_Test() throws Exception
 	{
 		    driver=TestBrowser.OpenChromeBrowser();
-		   // driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		   
+		    //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			
 		    String str= "TC01_Login";
 			R1= new Reporter1(driver,str);	
@@ -105,9 +106,11 @@ public class TC02_Fluent_Wait {
 				
 				findElement(By.id("welcome")).click();
 
-				WebDriverWait wait2=  new WebDriverWait(driver,60);
-				wait2.pollingEvery(20,TimeUnit.SECONDS);
+				WebDriverWait wait2=  new WebDriverWait(driver,120);
+				wait2.pollingEvery(30,TimeUnit.SECONDS);
 				wait2.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Logout"))) ;
+				
+				
 				  
 				  
 				findElement(By.linkText("Logout"));

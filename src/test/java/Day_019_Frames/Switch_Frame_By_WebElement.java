@@ -46,6 +46,7 @@ public class Switch_Frame_By_WebElement {
 	findElement(By.name("lastname")).sendKeys("Selenium and Java");
 	
 	driver.switchTo().defaultContent();
+	
 	driver.switchTo().frame(findElement(By.id("AmazonContactForm")));
 	
 	findElement(By.name("firstname")).clear();

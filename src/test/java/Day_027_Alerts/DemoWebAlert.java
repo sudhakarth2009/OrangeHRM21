@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.openqa.selenium.NoAlertPresentException;	
+
 import org.openqa.selenium.Alert;
 
 public class DemoWebAlert {
@@ -30,14 +31,14 @@ public class DemoWebAlert {
         Alert alert = driver.switchTo().alert();		
         		
         // Capturing alert message.    
-        String alertMessage= driver.switchTo().alert().getText();		
+        String alertMessage= alert.getText();		
         		
         // Displaying alert message		
         System.out.println(alertMessage);	
         Thread.sleep(5000);
         		
         // Accepting alert		
-        alert.accept();		
+        alert.dismiss();		
     }	
 
 }

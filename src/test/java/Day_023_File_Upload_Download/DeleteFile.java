@@ -35,7 +35,7 @@ public class DeleteFile
 	   
 
 	    @Test
-		public void File_Download()throws Exception
+		public void File_Delete()throws Exception
 		  {
 			
 			//SendKeys

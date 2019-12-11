@@ -65,23 +65,20 @@ public class ExportEmployees
 	@Test
 	public  void ExportAllEmployees( )throws Exception
 	{  
-		
-
 	    driver=TestBrowser.OpenChromeBrowser();
 			
-		
-			 ExcelApiTest3 eat = new ExcelApiTest3();
-			 int numberowsInputdata=eat.getRowCount("C://HTML Report//OrangeHRM6//TC01_EMPExport.xls","Sheet1");
+	    ExcelApiTest3 eat = new ExcelApiTest3();
+	   //int numberowsInputdata=eat.getRowCount("C://HTML Report//OrangeHRM6//TC01_EMPExport.xls","Sheet1");
 
-				 for(int i=1;i<2;i++)
-				 {		 
-					 UserName=eat.getCellData("C://HTML Report//OrangeHRM6//TC01_EMPExport.xls","Sheet1",i,0);
-					 Password=eat.getCellData("C://HTML Report//OrangeHRM6//TC01_EMPExport.xls","Sheet1",i,1);
-					 iRow=i;
-					 call_allmethods(iRow);
-				 }
-			
-				 driver.quit();
+	    for(int i=1;i<2;i++)
+		{		 
+			UserName=eat.getCellData("C://HTML Report//OrangeHRM6//TC01_EMPExport.xls","Sheet1",i,0);
+			Password=eat.getCellData("C://HTML Report//OrangeHRM6//TC01_EMPExport.xls","Sheet1",i,1);
+			iRow=i;
+			call_allmethods(iRow);
+		 }
+		
+	     driver.quit();
 				 
 	}
 	
@@ -115,6 +112,7 @@ public class ExportEmployees
 						
 						
 						 Actions actions = new Actions(driver);   
+						 
 						 WebElement ele=findElement(By.xpath(OR.Pim_focus));
 				         actions.moveToElement(ele).click().perform();
 						 
@@ -126,12 +124,12 @@ public class ExportEmployees
 				        //No. of columns
 						 String Empcoloums=" //*[@id='resultTable']/thead/tr/th";
 						 List<WebElement>  columns = driver.findElements(By.xpath(Empcoloums)); 
-					     // System.out.println("No of columns in WebTable : " + columns.size());
+					      System.out.println("No of columns in WebTable : " + columns.size());
 
 				        //No.of rows 
 						 String EmpRows="//*[@id='resultTable']/tbody/tr/td[5]";
 				        List<WebElement>   rows = driver.findElements(By.xpath(EmpRows)); 
-				       // System.out.println("No of rows in WebTable : " + rows.size());
+				       System.out.println("No of rows in WebTable : " + rows.size());
 				        
 				        
 	
@@ -141,7 +139,10 @@ public class ExportEmployees
 								    {
 								    	  for ( int j=2 ,k=0; j<=columns.size() ;j++,k++)
 								    	   {
-								      		   String str1="//*[@id='resultTable']/tbody/tr["  + i +  "]"  + "/td" + "[" + j +"]";
+								      		  
+								    		//*[@id="resultTable"]/tbody/tr[1]/td[2]
+								    		  
+								    		  String str1="//*[@id='resultTable']/tbody/tr["  + i +  "]"  + "/td" + "[" + j +"]";
 								      		   
 								      		    //*[@id="resultTable"]/tbody/tr[1]/td[2]
 								    		    WebElement Ele=findElement(By.xpath(str1));

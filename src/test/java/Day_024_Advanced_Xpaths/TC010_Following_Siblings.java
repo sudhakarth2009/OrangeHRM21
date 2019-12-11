@@ -23,25 +23,14 @@ public class TC010_Following_Siblings {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
 		driver =new ChromeDriver();
-		driver.manage().window().maximize() ;	
-		driver.get("http://demo.guru99.com/v1/");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().window().maximize() ;
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		
+		findElement(By.xpath("//*[@id='divUsername']"));
+		findElement(By.xpath("//*[@id='divUsername']//following-sibling::div[1]"));
 	
-		
-		findElement(By.xpath("//*[@name='uid']"));
-		findElement(By.xpath("//*[@name='uid']//following-sibling::label"));
-		
-		findElement(By.xpath("//*[@name='password']"));
-		findElement(By.xpath("//*[@name='password']//following-sibling::label"));
-		
-		findElement(By.xpath("//*[@type='submit']"));
-		findElement(By.xpath("//*[@type='submit']//following-sibling::input"));
-		
-		//https://opensource-demo.orangehrmlive.com/
-		// ----Username---->    //*[@id='divUsername']
-		//  ----Password--->    //*[@id='divUsername']//following-sibling::div
-		
-		//divPassword
 		
 		
 	}

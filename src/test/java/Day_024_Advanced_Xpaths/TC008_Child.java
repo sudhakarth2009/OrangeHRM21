@@ -25,26 +25,20 @@ public class TC008_Child {
 		System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
 		driver =new ChromeDriver();
 		driver.manage().window().maximize() ;	
-		driver.get("https://www.guru99.com");
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
 		
-
-		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
-		
-		
-		//*[@id='java_technologies']/child::li  ---> 1 of 93
-
-		findElement(By.xpath("//*[@id='java_technologies']/child::li[1]"));
-		findElement(By.xpath("//*[@id='java_technologies']/child::li[2]"));
-		findElement(By.xpath("//*[@id='java_technologies']/child::li[3]"));
-		findElement(By.xpath("//*[@id='java_technologies']/child::li[4]"));
-		
-
-		
+	
+		findElement(By.xpath("//*[@id='divUsername']"));
+		Thread.sleep(5000);
+		findElement(By.xpath(" //*[@id='divUsername']//child::input[1] "));
 		
 			
-		
+		Thread.sleep(5000);
+
+		findElement(By.xpath("//*[@id='divPassword']"));
+		Thread.sleep(5000);
+		findElement(By.xpath(" //*[@id='divPassword']//child::input[1] "));
 	}
 	
 	

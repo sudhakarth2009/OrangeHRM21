@@ -8,7 +8,8 @@ public class FlightFinder
 {
 	
 	WebDriver driver;
-	public FlightFinder(WebDriver driver)
+	
+	public void FlightFinder(WebDriver driver)
 	{
 		this.driver = driver;
 	}

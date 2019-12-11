@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+ 
+ 
+  <test  name="Test1">
+      <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="Day_017_ParallelTests1.TC01_Add_Nationalities"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test  name="Test2">
+       <parameter name="Browser" value="FireFox"/>
+    <classes>
+      <class name="Day_017_ParallelTests1.TC02_Add_Jobs"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->

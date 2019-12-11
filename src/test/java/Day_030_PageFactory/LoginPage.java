@@ -1,6 +1,6 @@
 package  Day_030_PageFactory;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,9 @@ public class LoginPage
 {
 	
 	WebDriver driver;
-	public LoginPage(WebDriver driver)
+	
+	
+	public void  LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -18,33 +20,42 @@ public class LoginPage
 	
 
 	// starts MercuryLoginPage by Sudhakar Date:12-Jan-2018
-	public static final String MLPage_UserNameTextbox="//input[@type='text'and @name='userName']";
-	public static final String MLPage_PasswordTextbox="//input[@type='password' and @name='password']";
-	public static final String MLPage_SignInButton="//*[@name='login']";
+
+	
 	//end MercuryLoginPage 
 	
+
 	
-	// All xpaths of Login Page only
-	  @FindBy(xpath=MLPage_UserNameTextbox)
-	    WebElement UserName;  
+	
+	//WebElement UserName=driver.findElement(By.name("userName"));
+	
+	//WebElement UserName1=driver.findElement(By.name("userName"));
+	
+	//WebElement Password1=driver.findElement(By.name("password"));
+	
+	//public static final String MLPage_SignInButton="//*[@name='login']";
+	
+	 	@FindBy(name="userName")
+	    WebElement UserName1;  
 
-	    @FindBy(xpath=MLPage_PasswordTextbox)
-	    WebElement Password;    
 
-	    @FindBy(xpath=MLPage_SignInButton)
-	    WebElement SignInButton;
+	    @FindBy(name="password")
+	    WebElement Password1;  
+	    
+	    @FindBy(name="login")
+	    WebElement SignInButton1;  
+
+	    //@FindBy(xpath=MLPage_SignInButton)
+	   // WebElement SignInButton1;
 
 	 //end MercuryLoginPage
 
 	public void Login() throws Exception {
 		
-		UserName.clear();
-		UserName.sendKeys("mercury");
-		
-		Password.clear();
-		Password.sendKeys("mercury");
 	
-		SignInButton.click();
+		UserName1.sendKeys("mercury");
+		Password1.sendKeys("mercury");
+		SignInButton1.click();
 
 	}
 	

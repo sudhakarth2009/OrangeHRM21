@@ -25,7 +25,7 @@ public class TC01_Explicit_Wait {
 	public void Login_Test() throws Exception
 	{
 		    driver=TestBrowser.OpenChromeBrowser();
-		    //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		   // driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			
 		    String str= "TC01_Login";
 			R1= new Reporter1(driver,str);	
@@ -50,14 +50,25 @@ public class TC01_Explicit_Wait {
 
 	public static void Login() throws Exception
 	{
-		findElement(By.name("txtUsername")).sendKeys("Admin");
-		R1.TakeScreenShotAuto(driver,"Username Entered","Pass");
 		
-		findElement(By.name("txtPassword")).sendKeys("admin123");
-		R1.TakeScreenShotAuto(driver,"Password Entered","Pass");
-		
-		findElement(By.id("btnLogin")).click();
-		R1.TakeScreenShotAuto(driver,"Clicked on Submit","Pass");
+		try
+		{
+			
+			findElement(By.name("txtUsername")).sendKeys("Admin");
+			R1.TakeScreenShotAuto(driver,"Username Entered","Pass");
+			
+			findElement(By.name("txtPassword")).sendKeys("admin123");
+			R1.TakeScreenShotAuto(driver,"Password Entered","Pass");
+			
+			findElement(By.id("btnLogin")).click();
+			R1.TakeScreenShotAuto(driver,"Clicked on Submit","Pass");
+		}
+		catch(Exception e)
+		{
+			String str=e.getMessage();
+			R1.TakeScreenShotAuto(driver,str,"Fail");
+		}
+
 		
 		
 	}
@@ -67,22 +78,33 @@ public class TC01_Explicit_Wait {
 	
 	public static void Addnatialities() throws Exception
 	{
-		
+				try
+				{
+					
+					findElement(By.linkText("Admin")).click();
+					R1.TakeScreenShotAuto(driver,"Clicked on Admin","Pass");
+					
+					findElement(By.linkText("Nationalities")).click();
+					R1.TakeScreenShotAuto(driver,"Clicked on Nationalities","Pass");
+					
+					findElement(By.name("btnAdd")).click();
+					R1.TakeScreenShotAuto(driver,"Clicked on Add Nationalitis button","Pass");
+					
+					findElement(By.id("nationality_name")).sendKeys("Kenyas2");
+					R1.TakeScreenShotAuto(driver,"Entered Nationality Text","Pass");
+					
+					findElement(By.id("btnSave")).click();
+					R1.TakeScreenShotAuto(driver,"Clicked on Save","Pass");
+				}
+				
+				catch(Exception e)
+				{
+					String str=e.getMessage();
+					R1.TakeScreenShotAuto(driver,str,"Fail");
+				}
 
-		findElement(By.linkText("Admin")).click();
-		R1.TakeScreenShotAuto(driver,"Clicked on Admin","Pass");
 		
-		findElement(By.linkText("Nationalities")).click();
-		R1.TakeScreenShotAuto(driver,"Clicked on Nationalities","Pass");
 		
-		findElement(By.name("btnAdd")).click();
-		R1.TakeScreenShotAuto(driver,"Clicked on Add Nationalitis button","Pass");
-		
-		findElement(By.id("nationality_name")).sendKeys("Kenyas2");
-		R1.TakeScreenShotAuto(driver,"Entered Nationality Text","Pass");
-		
-		findElement(By.id("btnSave")).click();
-		R1.TakeScreenShotAuto(driver,"Clicked on Save","Pass");
 		
 	}
 	
@@ -111,7 +133,6 @@ public class TC01_Explicit_Wait {
 				 
 				 
 				 
-				
 				 findElement(By.linkText("Logout"));
 				R1.TakeScreenShotAuto(driver,"Clicked on Logout ","Pass");
 				findElement(By.linkText("Logout")).click();

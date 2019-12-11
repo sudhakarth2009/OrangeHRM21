@@ -50,7 +50,7 @@ public class FrameByIndex {
 	findElement(By.name("firstname")).sendKeys("Kiran");
 	findElement(By.name("lastname")).sendKeys("Java");
 
-	driver.quit();
+	//driver.quit();
 	
 	
 }

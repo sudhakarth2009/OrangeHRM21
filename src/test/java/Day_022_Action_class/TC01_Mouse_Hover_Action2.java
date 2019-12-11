@@ -36,8 +36,8 @@ public class TC01_Mouse_Hover_Action2 {
 	
 	WebElement Time=findElement(By.xpath("//*[@id='menu_time_viewTimeModule']"));
 	WebElement attendance=findElement(By.xpath("//*[@id='menu_attendance_Attendance']"));
-	WebElement MyRecords=findElement(By.xpath("//*[@id='menu_attendance_viewMyAttendanceRecord']"));
-
+	WebElement MyRecords=findElement(By.xpath("//*[@id='menu_attendance_viewAttendanceRecord']"));
+	
 	Actions actions = new Actions(driver);
 
 	

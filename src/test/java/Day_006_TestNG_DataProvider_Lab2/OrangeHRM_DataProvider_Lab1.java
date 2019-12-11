@@ -10,6 +10,8 @@ public class OrangeHRM_DataProvider_Lab1
 {
 	WebDriver driver;
 	
+	
+	//step1
 	@DataProvider(name = "TC01_Add_Nationality")
 	public static Object[][] Authentication1() throws Exception {
 		
@@ -22,8 +24,10 @@ public class OrangeHRM_DataProvider_Lab1
 	
 	
 	
-	@Test(dataProvider = "TC01_Add_Nationality")
-	public void Test1(String TestURL,String UserName,String Password,String Nationality) throws Exception {
+	@Test(dataProvider = "TC01_Add_Nationality") //step2
+	public void Test1(String TestURL,String UserName,String Password,String Nationality) throws Exception //step3
+	
+	{
 		
 		//OpenChromeBrowser
 		driver = TestBrowser.OpenChromeBrowser();

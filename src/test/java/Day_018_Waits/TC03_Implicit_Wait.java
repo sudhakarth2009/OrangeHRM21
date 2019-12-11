@@ -25,7 +25,8 @@ public class TC03_Implicit_Wait {
 		
 		
 		   driver=TestBrowser.OpenChromeBrowser();
-		   driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		   
+		  driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			
 		    String str= "TC01_Login";
 			R1= new Reporter1(driver,str);	

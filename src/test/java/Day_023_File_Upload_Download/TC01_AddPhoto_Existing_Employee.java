@@ -9,8 +9,8 @@ import org.testng.annotations.*;
 
 
 import java.awt.Robot;
-import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 
  
@@ -75,22 +75,28 @@ public class TC01_AddPhoto_Existing_Employee
 	public   void PhotoUpload(String PhotoPath)throws Exception
 	{
 		
-		
+		//*[@id="photofile"]
 	   findElement(By.xpath("//*[@id='photofile']")).click();
 
 	
 		Thread.sleep(1000);
+		
+	
+
 		 
 		// Specify the file location with extension
 		// StringSelection sel = new StringSelection("C:\\Users\\Sudhakar\\Desktop\\download1.jpg");
 		 
+		
+		//ctrl + copy
 		 StringSelection sel = new StringSelection(PhotoPath);
 		 Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sel,null);
 		
-		 
+	
+
 		 // Create object of Robot class
 		 Robot robot = new Robot();
-		 Thread.sleep(2000);
+		 //Thread.sleep(2000);
 		 
 		  // Press CTRL+V
 		 robot.keyPress(KeyEvent.VK_CONTROL);
@@ -107,7 +113,7 @@ public class TC01_AddPhoto_Existing_Employee
 		 
 		 Thread.sleep(8000);
 	
-		findElement(By.xpath(OR.Emp_save_click)).click();
+		findElement(By.id("btnSave")).click();
 		
 		
 		Thread.sleep(10000);

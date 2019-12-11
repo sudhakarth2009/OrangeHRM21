@@ -32,14 +32,18 @@ public class TC03_Change_MethodName {
 		}
 	 
 	
-	
-	
+	// PASSED: TestA
+	// PASSED: TestB
+	// PASSED: TestY
+	// PASSED: TestZ
+	// FAILED: TestD
+	// FAILED: TestE
 	
 	
 	
 	
 	@Test
-	public  void Test1_OpenChromeBrowser()
+	public  void TestA()
 	{
 	System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
 	driver =new ChromeDriver();
@@ -48,7 +52,7 @@ public class TC03_Change_MethodName {
 
 
 	@Test
-	public  void Test2_OpenOrangeHRM() throws Exception
+	public  void TestB() throws Exception
 	{
 		
 		String TestURL = "https://opensource-demo.orangehrmlive.com/";
@@ -58,7 +62,7 @@ public class TC03_Change_MethodName {
 	
 
 	@Test
-	public  void Test99_Login() throws Exception
+	public  void TestY() throws Exception
 	{
 		findElement(By.name("txtUsername")).sendKeys("Admin");
 		findElement(By.name("txtPassword")).sendKeys("admin123");
@@ -70,7 +74,7 @@ public class TC03_Change_MethodName {
 
 	
 	@Test
-	public  void Test4_Addnatialities() throws Exception
+	public  void TestD() throws Exception
 	{
 		findElement(By.linkText("Admin")).click();
 		findElement(By.linkText("Nationalities")).click();
@@ -85,7 +89,7 @@ public class TC03_Change_MethodName {
 	
 	
 	@Test
-	public   void Test5_Logout()throws Exception
+	public   void TestE()throws Exception
 	 {
 		 findElement(By.id("welcome")).click();	 
 		Thread.sleep(300);
@@ -95,7 +99,7 @@ public class TC03_Change_MethodName {
 	
 	
 	@Test
-	public   void Test6_closebrowser() throws Exception
+	public   void TestZ() throws Exception
 	{
 		 driver.quit();
 	}

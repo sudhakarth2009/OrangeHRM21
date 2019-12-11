@@ -29,8 +29,6 @@ public class TC001_Absolute_Xpath {
 		
 		
 	
-		
-	
 		//UserName
 		findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[2]/input"));
 			

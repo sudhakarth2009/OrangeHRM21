@@ -24,11 +24,20 @@ public class TC01_Locators
 		findElement(By.cssSelector("input#txtUsername")).clear();
 		findElement(By.cssSelector("input#txtUsername")).sendKeys("Admin");
 		
+		
 		//findElement(By.xpath("//*[@id='txtUsername']")).clear();
 		//findElement(By.xpath("//*[@id='txtUsername']")).sendKeys("Admin");
 		
 		//driver.findElement(By.name("txtUsername")).sendKeys("Admin");
 		//driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+		
+		//*[@id="txtUsername"]
+		//*[@id='txtPassword']
+		
+		
+		
+		//findElement(By.xpath("//*[@id='txtUsername']")).clear();
+		//findElement(By.xpath("//*[@id='txtUsername']")).sendKeys("Admin");
 		
 		findElement(By.xpath("//*[@id='txtPassword']")).clear();
 		findElement(By.xpath("//*[@id='txtPassword']")).sendKeys("admin123");
@@ -46,12 +55,20 @@ public class TC01_Locators
 		
 		
 		//to identify group of similar Web elements
-		List<WebElement> numberofTextFields=  driver.findElements(By.xpath("//input[ @type='text']"));
+		
+		//
+		//List<WebElement> numberofTextFields=  driver.findElements(By.xpath("//input[ @type='text']"));
+		
+		List<WebElement> numberofTextFields=driver.findElements(By.tagName("input"));
 		int lnput_count= numberofTextFields.size();
-		System.out.println("Number of Input text fields "+lnput_count);
+		System.out.println("Number of Input text fields "+lnput_count); 
+		
+		
 				
 		
 		findElement(By.className("button")).click();
+		
+	
 
 		//*[@id='txtPassword']
 		
@@ -59,7 +76,10 @@ public class TC01_Locators
 	
 	findElement(By.linkText("Admin")).click();
 	
-	findElement(By.partialLinkText("Nationalitä")).click();
+	findElement(By.partialLinkText("Nationali")).click();
+	
+
+	
 	
 	//findElement(By.linkText("PIM")).click();
 	//findElement(By.linkText("Nationalitäten")).click();
@@ -80,9 +100,9 @@ public class TC01_Locators
 		//driver.findElement(By.partialLinkText("Nationali")).click();	
 		
 		
-		/*List<WebElement> links=  driver.findElements(By.tagName("a"));
+		List<WebElement> links=  driver.findElements(By.tagName("a"));	
 		int links_count= links.size();
-		System.out.println("Number of hyperlinks "+links_count);*/
+		System.out.println("Number of hyperlinks "+links_count);
 	
 		
 	}

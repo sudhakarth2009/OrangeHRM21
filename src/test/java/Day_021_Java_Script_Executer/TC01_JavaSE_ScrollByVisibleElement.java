@@ -1,9 +1,13 @@
 package  Day_021_Java_Script_Executer;
-import org.openqa.selenium.By;			
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;			
 import org.testng.annotations.Test;			
 
-import org.openqa.selenium.JavascriptExecutor;
+
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 public class TC01_JavaSE_ScrollByVisibleElement 
@@ -23,25 +27,19 @@ public class TC01_JavaSE_ScrollByVisibleElement
 
      // Launch the application		
         driver.get("   https://www.amazon.in/");
+        
+        WebElement Element = findElement(By.linkText("Conditions of Use & Sale"));
+        WebElement Element1 = findElement(By.linkText("Privacy Notice"));
+        WebElement Element2 = findElement(By.linkText("Interest-Based Ads"));
        
      
         //How to do scrolling	
         JavascriptExecutor js = (JavascriptExecutor)driver;		
 
-        WebElement Element = findElement(By.linkText("Conditions of Use & Sale"));
+    
         js.executeScript("arguments[0].scrollIntoView();", Element);
-        
-        
-        
-        
-        WebElement Element1 = findElement(By.linkText("Privacy Notice"));
-         js.executeScript("arguments[0].scrollIntoView();", Element1);
-        
-        
-        
-        
-        WebElement Element2 = findElement(By.linkText("Interest-Based Ads"));
-          js.executeScript("arguments[0].scrollIntoView();", Element2);
+        js.executeScript("arguments[0].scrollIntoView();", Element1);
+        js.executeScript("arguments[0].scrollIntoView();", Element2);
         
 
     }		

@@ -7,7 +7,8 @@ public class LoginPage
 {
 	
 	WebDriver driver;
-	public LoginPage(WebDriver driver)
+	
+	public void LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
 	}

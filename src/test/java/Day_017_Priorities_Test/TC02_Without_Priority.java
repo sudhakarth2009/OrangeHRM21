@@ -75,7 +75,7 @@ public class TC02_Without_Priority {
 		findElement(By.linkText("Admin")).click();
 		findElement(By.linkText("Nationalities")).click();
 		findElement(By.name("btnAdd")).click();
-		findElement(By.id("nationality_name")).sendKeys("Kenyas21");
+		findElement(By.id("nationality_name")).sendKeys("Kenyas211");
 		findElement(By.id("btnSave")).click();
 	}
 	
@@ -88,7 +88,7 @@ public class TC02_Without_Priority {
 	public   void Test5_Logout()throws Exception
 	 {
 		 findElement(By.id("welcome")).click();	 
-		Thread.sleep(5000);
+		 Thread.sleep(9000);
 		 findElement(By.linkText("Logout")).click();
 		 
 	 }

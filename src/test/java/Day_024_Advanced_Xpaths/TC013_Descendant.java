@@ -29,28 +29,25 @@ public class TC013_Descendant {
 		
 		
 		
-		findElement(By.xpath("//*[@id='divUsername']"));
+	
+
 		
 
 		//UserName
-		//findElement(By.xpath("//*[@id='txtUsername']//self::input"));
+		findElement(By.xpath("//*[@id='divUsername']"));
 		findElement(By.xpath("//*[@id='divUsername']//descendant::input[1]"));
-		
-		
 			
 		//Password
-		//findElement(By.xpath("//*[@id='txtPassword']//self::input"));
-		
 		findElement(By.xpath("//*[@id='divPassword']"));
 		findElement(By.xpath("//*[@id='divPassword']//descendant::input[1]"));
 		
 		
 		
 		//Login button
-		findElement(By.xpath("//*[@id='divLoginButton']"));
+		/*findElement(By.xpath("//*[@id='divLoginButton']"));
 		findElement(By.xpath("//*[@id='divLoginButton']//descendant::input[1]"));	
 		findElement(By.xpath("//*[@id='divLoginButton']//descendant::div[1]"));
-		findElement(By.xpath("//*[@id='divLoginButton']//descendant::a[1]"));
+		findElement(By.xpath("//*[@id='divLoginButton']//descendant::a[1]"));*/
 			
 		
 	}

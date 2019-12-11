@@ -1,6 +1,9 @@
 package  Day_013_TestNG_Paraneters1;
 import CommonUtil.*;
+
 import org.openqa.selenium.JavascriptExecutor;
+
+
 import ExcelUtil.ExcelApiTest4;
 import org.openqa.selenium.WebDriver;
 
@@ -41,8 +44,6 @@ public class BrowserTesting_DataProvider3
 			System.out.println("Chrome Brwoser Started :"+browser);
 		}
 		
-
-
 	}
 	
 
@@ -127,6 +128,7 @@ public static Object[][] Authentication1() throws Exception {
 	
 	 findElement(By.xpath(OR.Admin_focus));
 	 R1.TakeScreenShotAuto(driver,"Clicked on Admin ","Pass");
+	 
 	 findElement(By.xpath(OR.Admin_focus)).click();
 	 
 	 findElement(By.xpath(OR.Nationality_link));
@@ -144,8 +146,10 @@ public static Object[][] Authentication1() throws Exception {
 	 
 	
 	WebElement Element2 = findElement(By.linkText(Nationality));
+	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].scrollIntoView();", Element2);
+	
 	R1.TakeScreenShotAuto(driver,"Scroll Nationality ","Pass");
 	
 	}

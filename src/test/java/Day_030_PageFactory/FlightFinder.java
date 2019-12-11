@@ -10,7 +10,7 @@ public class FlightFinder
 {
 	
 	WebDriver driver;
-	public FlightFinder(WebDriver driver)
+	public void FlightFinder(WebDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -24,14 +24,16 @@ public static final String MFFPage_DepartingFromListbox="//select[@name='fromPor
 public static final String MFFPage_DepartingStartMonthListbox="//select[@name='fromMonth']";
 public static final String MFFPage_DepartingStartDateListbox="//select[@name='fromDay']";
 public static final String MFFPage_ArrivingIn="//select[@name='toPort']";
-public static final String MFFPage_ReturningEndMonthListbox="//select[@name='toMonth']";
+
+
+/*public static final String MFFPage_ReturningEndMonthListbox="//select[@name='toMonth']";
 public static final String MFFPage_ReturningEndDateListbox="//select[@name='toDay']";
 public static final String MFFPage_EconomyclassRadioButton="//input[@type='radio' and @name='servClass' and @value='Coach']";
 public static final String MFFPage_BusinessclassRadioButton="//input[@type='radio' and @name='servClass' and @value='Business']";
 public static final String MFFPage_FirstClassRadioButton ="//input[@type='radio' and @name='servClass' and @value='First']";
 public static final String MFFPage_AirLineListbox ="//select[@name='airline']";
 public static final String MFFPage_ContinueButton ="//*[@name='findFlights']";
-public static final String MFFPage_SelectFlightImg ="//img[ @src='/images/masts/mast_flightfinder.gif' and @width='492' and @height='30']";
+public static final String MFFPage_SelectFlightImg ="//img[ @src='/images/masts/mast_flightfinder.gif' and @width='492' and @height='30']";*/
 //End MercuryFlightFinderPage
 		
 		

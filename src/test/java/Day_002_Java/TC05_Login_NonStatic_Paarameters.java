@@ -29,6 +29,23 @@ public class TC05_Login_NonStatic_Paarameters {
 	
 	}
 	
+	public  void OpenChromeBrowser() throws Exception
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.manage().window().maximize() ;	
+	
+	}
+	
+	public  void OpenOrangeHRM() throws Exception
+	{
+		
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+	}
+	
+	
+	
+	
 
 	public  void Login(String UserName,String Password) throws Exception
 	{
@@ -40,6 +57,7 @@ public class TC05_Login_NonStatic_Paarameters {
 
 	public    void AddNationalities(String Nationality) throws Exception
 	{
+		
 		findElement(By.linkText("Admin")).click();
 		findElement(By.linkText("Nationalities")).click();
 		findElement(By.name("btnAdd")).click();
@@ -70,20 +88,9 @@ public class TC05_Login_NonStatic_Paarameters {
 	
 	
 	
-	public  void OpenOrangeHRM() throws Exception
-	{
-		
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-	}
 	
 	
-	public  void OpenChromeBrowser() throws Exception
-	{
-		System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
-		driver =new ChromeDriver();
-		driver.manage().window().maximize() ;	
 	
-	}
 	
 	
 	

@@ -5,12 +5,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;			
 import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
+
+import CommonUtil.TestBrowser;
 public class FileDownLoad
 {
 	static WebDriver driver;
@@ -46,6 +50,7 @@ public class FileDownLoad
 	    	    System.setProperty("webdriver.chrome.driver","C:\\chromedriver_win32\\chromedriver.exe");
 				 driver =new ChromeDriver();
 				 driver.manage().window().maximize() ;	
+				 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				 driver.get("https://opensource-demo.orangehrmlive.com/");
 	    	
 				findElement(By.id("txtUsername")).sendKeys("Admin");
@@ -56,29 +61,38 @@ public class FileDownLoad
 			 	 findElement(By.id("menu_pim_viewEmployeeList")).click();
 			 	 findElement(By.linkText("John")).click();
 			 	 
+			 	 
+			 	 
+			 	//*[@id='tblAttachments']/tbody/tr/td[2]
+			 	 
+			 	//*[@id="tblAttachments"]/tbody/tr/td[2]
+			 	 
 			 	 String str1="//*[@id='tblAttachments']/tbody/tr/td[2]";
-			 	 WebElement CellText1=findElement(By.xpath(str1));
-	    		 String fname = CellText1.getText();
+			 	 WebElement Element=findElement(By.xpath(str1));
+			 	 
+	    		 String fname = Element.getText();
 			 	 
 		
 	    		 findElement(By.linkText(fname)).click();
 	    		 
-	    		
+	    
 			 	 
 			 	 String SrcFile="C:\\Users\\Saryu\\Downloads\\"+fname;
 			
 			 	 String DestinationFile="C:\\HTML Report\\"+fname;
 		
 			 	Thread.sleep(6000);
-			 	moveFile(SrcFile, DestinationFile);
+			 	
+			 	TestBrowser.moveFile(SrcFile, DestinationFile);
 
 		        
 			 	 
 		  }	 	 
 			 	 
 	
-	    public static void moveFile(String src, String dest ) throws InterruptedException {
+	  /*  public static void moveFile(String src, String dest ) throws InterruptedException {
 	        Path result = null;
+	       
 	        try {
 	           result =  Files.move(Paths.get(src), Paths.get(dest));
 	           
@@ -87,12 +101,13 @@ public class FileDownLoad
 	        } catch (IOException e) {
 	           System.out.println("Exception while moving file: " + e.getMessage());
 	        }
+	        
 	        if(result != null) {
 	           System.out.println("File moved successfully.");
 	        }else{
 	           System.out.println("File movement failed.");
 	        }  
-	     }
+	     } */
 	    
 	
 		

@@ -24,14 +24,16 @@ public class TC01_Open_New_Tab {
 
 	//below line opens new tab
 	((JavascriptExecutor)driver).executeScript("window.open()");
-
+	
 	
 	//strore all the open windows in ArrayList string
 	ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 	
 	//Switch to New tab
 	driver.switchTo().window(tabs.get(1));
-	driver.get("http://google.com");	
+	driver.get("http://google.com");
+	
+	
 	 
 	driver.switchTo().window(tabs.get(0));
 	//back to MainWindow

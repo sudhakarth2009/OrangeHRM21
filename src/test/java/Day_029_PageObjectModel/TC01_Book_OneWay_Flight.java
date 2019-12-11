@@ -1,3 +1,4 @@
+
 package  Day_029_PageObjectModel;
 import org.testng.annotations.Test;
 import CommonUtil.*;
@@ -23,10 +24,12 @@ public class TC01_Book_OneWay_Flight
 	@Test
 	public void Book_OneWay_Flight() throws Exception {
 		
-		LoginPage L1 = new LoginPage(driver);
+		LoginPage L1 = new LoginPage();
+		L1.LoginPage(driver);
 		L1.Login();
 		
-		FlightFinder F1= new FlightFinder(driver);
+		FlightFinder F1= new FlightFinder();
+		F1.FlightFinder(driver);
 		F1.FlightFinderPage_OneWayBooking();
 		
 		driver.quit();

@@ -42,7 +42,7 @@ public class TC02_Login_Static_Paarameters1 {
 					if(Browser.equalsIgnoreCase("FireFox"))
 					{
 							driver = TestBrowser.OpenFirefoxBrowser();
-							Thread.sleep(5000);
+							Thread.sleep(6000);
 					}
 						
 	

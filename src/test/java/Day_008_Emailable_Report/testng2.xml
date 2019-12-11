@@ -3,11 +3,18 @@
 <suite name="Suite">
 
   <test thread-count="5" name="ThirdReport">
-   <parameter name="Browser1" value="Chrome"/> 
+   <parameter name="Browser2" value="Chrome"/> 
     <classes>
       <class name="Day_008_Emailable_Report.TestExample2_Browser"/>
     </classes>
   </test> <!-- Test -->
+  
+ <test thread-count="5" name="ThirdReport">
+   <parameter name="Browser2" value="Chrome"/> 
+    <classes>
+      <class name="Day_008_Emailable_Report.TestExample2_Browser"/>
+    </classes>
+  </test>  
   
   
 </suite> <!-- Suite -->

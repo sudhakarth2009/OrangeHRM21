@@ -8,11 +8,7 @@ import org.testng.annotations.*;
 public class TC01_Book_OneWay_Flight
 {
 	WebDriver driver;
-/*	public void Test1(WebDriver driver)
-	{
-		this.driver = driver;
-	}
-	*/
+
 	
 	@BeforeTest 
 	public void  TestSetup()throws Exception {
@@ -22,18 +18,30 @@ public class TC01_Book_OneWay_Flight
 		driver.get(TestURL);
 	}
 	
+	
 	@Test
 	public void Book_OneWay_Flight() throws Exception {
 		
-		LoginPage L1 = new LoginPage(driver);
+		LoginPage L1 = new LoginPage();
+		L1.LoginPage(driver);
 		L1.Login();
 		
-		FlightFinder F1= new FlightFinder(driver);
+		FlightFinder F1= new FlightFinder();
+		F1.FlightFinder(driver);
 		F1.FlightFinderPage_OneWayBooking();
+		
+		
+	}
+	
+	
+	@AfterTest 
+	public void  CloseBrowser()throws Exception {
 		
 		driver.quit();
 		
 	}
+	
+	
 }
 
 

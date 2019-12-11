@@ -43,6 +43,8 @@ public class TC01_Open_Three_Tabs {
 	driver.switchTo().window(tabs.get(2));
 	driver.get("https://facebook.com");
 	
+	driver.quit();
+	//driver.close();
 	
 		
 	}

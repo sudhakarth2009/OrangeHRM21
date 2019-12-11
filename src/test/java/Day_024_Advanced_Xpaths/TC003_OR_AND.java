@@ -12,15 +12,14 @@ public class TC003_OR_AND {
 	
 	WebDriver driver;
 	
-	//String Nationality_xpath ="//a[text()='Nationalities']";
-	//String Nationality_xpath1 ="//*[text()='Nationalities']";
 	
 	//<input name="txtUsername" id="txtUsername" type="text">
 	
 	//input[@name='txtUsername'  and  @id='txtUsername']
 	
 	String Login_Xpath="//*[@type='submit' or @name='btnReset']";
-	String 	Login1_Xpath1="//input[@type='submit' and @name='btnLogin']";
+	
+	String 	Login1_Xpath1="//input[@type='submit' and @id='btnLogin']";
 
 	
 	@Test
@@ -36,6 +35,7 @@ public class TC003_OR_AND {
 		
 		findElement(By.name("txtUsername")).sendKeys("Admin");
 		findElement(By.name("txtPassword")).sendKeys("admin123");
+		
 		findElement(By.xpath(Login1_Xpath1)).click();			
 		
 		    

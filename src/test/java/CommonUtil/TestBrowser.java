@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.testng.annotations.BeforeTest;
-
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
@@ -37,7 +35,7 @@ import java.sql.Timestamp;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.*;
 import org.testng.annotations.*;
-import java.io.File;
+
 import java.io.*;
 
 import org.openqa.selenium.OutputType;
@@ -52,6 +50,9 @@ import java.net.*;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.net.MalformedURLException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.util.*;
@@ -60,28 +61,23 @@ public class TestBrowser
 
 {
 	 public static String ChromedriverPath = "C:\\chromedriver_win32\\chromedriver.exe";
-	 public static String IEdriverPath = "C:\\Users\\sudhakar\\Desktop\\seleni\\IEDriverServer_Win32_3.14.0\\IEDriverServer.exe";
 	 public static String FirefoxdriverPath = "C:\\FireFoxDriver\\geckodriver.exe";
 		
-
-	 
-	 
-
-			  
 		  public  static   WebDriver OpenChromeBrowser()throws Exception
 			 {
 			
-	 			 WebDriver driver1 ; 
+	 			 	WebDriver driver1 ; 
 	 			
 	 			 	System.setProperty("webdriver.chrome.driver",ChromedriverPath);
 	 			 	driver1 =new ChromeDriver();
 	 			 	driver1.manage().window().maximize() ;	
 	 			 	
 				    return driver1;
-	 			
 			}
 		  
 		  
+		  
+		  public static String IEdriverPath = "C:\\Users\\sudhakar\\Desktop\\seleni\\IEDriverServer_Win32_3.14.0\\IEDriverServer.exe";
 		 
 		//  @Test  
 		  public  static WebDriver OpenIEBrowser()throws Exception
@@ -158,6 +154,27 @@ public class TestBrowser
 			 }
 		  
 		  
+		  
+		  
+		  public static void moveFile(String src, String dest ) throws InterruptedException {
+		        Path result = null;
+		       
+		        try {
+		           result =  Files.move(Paths.get(src), Paths.get(dest));
+		           
+		           
+		           Thread.sleep(5000);
+		        } catch (IOException e) {
+		           System.out.println("Exception while moving file: " + e.getMessage());
+		        }
+		        
+		        if(result != null) {
+		           System.out.println("File moved successfully.");
+		        }else{
+		           System.out.println("File movement failed.");
+		        }  
+		     }
+		    
 		  
 		  
   

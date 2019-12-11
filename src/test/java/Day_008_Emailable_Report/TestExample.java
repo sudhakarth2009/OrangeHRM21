@@ -26,7 +26,7 @@ public class TestExample
 		driver.findElement(By.id("txtPassword")).sendKeys("admin123");	
 		Reporter.log("Pass- Enter Password");
 		
-		driver.findElement(By.name("Submit")).click();
+		driver.findElement(By.name("Submit1")).click();
 		Reporter.log("Pass- Click on Signin");
 		
 		driver.close();

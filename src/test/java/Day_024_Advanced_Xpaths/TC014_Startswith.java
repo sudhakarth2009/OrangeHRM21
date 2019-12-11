@@ -16,7 +16,7 @@ public class TC014_Startswith {
 	//String Nationality_xpath1 ="//*[starts-with(text(),'Nationalities')]";
 	
 	String Nationality_xpath ="//*[starts-with(@id,'menu_admin_nationality')]";
-//	String Nationality_xpath ="//*[starts-with(text()='Nationa')]";
+//	String Nationality_xpath ="//*[starts-with(text(),'Nationa')]";
 
 	@Test
 	public void Test1()throws Exception

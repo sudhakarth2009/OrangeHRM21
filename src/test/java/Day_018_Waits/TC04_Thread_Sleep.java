@@ -101,7 +101,6 @@ public class TC04_Thread_Sleep {
 			try
 			{
 				findElement(By.id("welcome")).click();
-				
 
 				Thread.sleep(10000); // time to sleep in milliseconds,  1 Sec= 1000 milli Seconds
 				

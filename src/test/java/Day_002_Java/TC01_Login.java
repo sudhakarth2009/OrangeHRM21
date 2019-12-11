@@ -23,7 +23,7 @@ public class TC01_Login {
 	
 	findElement(By.name("txtUsername")).sendKeys("Admin");
 	findElement(By.name("txtPassword")).sendKeys("admin123");
-	findElement(By.id("btnLogin")).click();
+	findElement(By.name("Submit")).click();
 		
 	}
 	
